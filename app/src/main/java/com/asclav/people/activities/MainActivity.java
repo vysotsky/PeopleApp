@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.asclav.people.R;
-import com.asclav.people.fragments.MainActivityFragment;
+import com.asclav.people.fragments.MainFragment;
 
 import butterknife.Bind;
 
@@ -17,8 +17,7 @@ public class MainActivity extends BaseActivity {
 
 	@Bind(R.id.toolbar) Toolbar mToolbar;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		setSupportActionBar(mToolbar);
@@ -26,24 +25,18 @@ public class MainActivity extends BaseActivity {
 			getSupportFragmentManager()
 					.beginTransaction()
 					.add(R.id.container,
-							MainActivityFragment.newInstance(),
-							MainActivityFragment.class.getSimpleName())
+							MainFragment.newInstance(),
+							MainFragment.class.getSimpleName())
 					.commit();
 		}
-//		else {
-//			getSupportFragmentManager()
-//					.findFragmentByTag(MainActivityFragment.class.getSimpleName());
-//		}
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+	@Override public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.menu_main, menu);
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
+	@Override public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 			case R.id.action_settings:
 				return true;

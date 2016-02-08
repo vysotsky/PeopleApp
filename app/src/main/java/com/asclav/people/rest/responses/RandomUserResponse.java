@@ -1,13 +1,11 @@
 package com.asclav.people.rest.responses;
 
-import com.asclav.people.Normalizable;
-import com.asclav.people.entities.UserEntity;
-
 import java.util.List;
 
 /**
  * Created by Vlad on 11/17/15.
  */
+@SuppressWarnings("unused")
 public class RandomUserResponse {
 
 	List<UserWrapper> results;
@@ -48,7 +46,7 @@ public class RandomUserResponse {
 
 	}
 
-	public static class User implements Normalizable<UserEntity> {
+	public static class User  {
 		String username;
 		Picture picture;
 
@@ -74,10 +72,6 @@ public class RandomUserResponse {
 
 		public void setPicture(Picture picture) {
 			this.picture = picture;
-		}
-
-		@Override public UserEntity normalize() {
-			return new UserEntity(username, picture.large);
 		}
 
 		public static class Picture {

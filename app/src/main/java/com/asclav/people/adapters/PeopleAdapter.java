@@ -1,5 +1,6 @@
 package com.asclav.people.adapters;
 
+import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
 	}
 
 	@Override public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+		@SuppressLint("InflateParams")
 		View root = LayoutInflater.from(parent.getContext()).inflate(R.layout.people_list_item, null);
 		return new ViewHolder(root);
 	}

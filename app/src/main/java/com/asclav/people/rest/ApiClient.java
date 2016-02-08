@@ -1,10 +1,10 @@
 package com.asclav.people.rest;
 
 import com.asclav.people.rest.services.PeopleService;
-import com.squareup.okhttp.OkHttpClient;
 
-import retrofit.GsonConverterFactory;
-import retrofit.Retrofit;
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by Vlad on 11/17/15.

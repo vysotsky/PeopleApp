@@ -2,9 +2,9 @@ package com.asclav.people.rest.services;
 
 import com.asclav.people.rest.responses.RandomUserResponse;
 
-import retrofit.Call;
-import retrofit.http.GET;
-import retrofit.http.Query;
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 /**
  * Created by Vlad on 11/17/15.

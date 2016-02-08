@@ -6,6 +6,7 @@ import android.os.Parcelable;
 /**
  * Created by Vlad on 11/17/15.
  */
+@SuppressWarnings("unused")
 public class UserEntity implements Parcelable {
 
 	private String mUsername;
