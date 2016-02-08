@@ -25,19 +25,16 @@ local.properties
 
 # Windows thumbnail db
 Thumbs.db
+/app/build
 
-# OSX files
-.DS_Store
 
 # Eclipse project files
 .classpath
 .project
 
 # Android Studio
-*.iml
 .idea
-#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
-.gradle
+
 build/
 
 #NDK
